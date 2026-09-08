@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: var(--font);
+  color: var(--ink);
+  background-color: var(--field);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 140ms ease-out,
+    color 140ms ease-out;
+}
+
+img,
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-header,
+.stage {
+  width: min(100% - 2 * var(--gutter), var(--column));
+  margin-inline: var(--gutter) auto;
+}
+
+.site-header {
+  padding-top: clamp(1.25rem, 0.8rem + 2vw, 2.25rem);
+}
+
+.wordmark {
+  font-size: var(--text-ui);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.wordmark:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: clamp(1.25rem, 0.8rem + 2vw, 2rem) var(--gutter);
+  font-size: var(--text-ui);
+}
+
+.site-footer a {
+  font-weight: 650;
+}
+
+.site-footer__github {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  text-decoration: none;
+}
+
+.site-footer__github-icon {
+  width: 22px;
+  height: 22px;
+  background-color: currentColor;
+  -webkit-mask: url("/github.svg") center / contain no-repeat;
+  mask: url("/github.svg") center / contain no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

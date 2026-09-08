@@ -1,0 +1,111 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: clamp(1.75rem, 1.1rem + 2.5vw, 3rem);
+  padding-top: clamp(3.5rem, 2rem + 10vh, 8.5rem);
+  padding-bottom: clamp(2rem, 1rem + 4vh, 4rem);
+}
+
+.line {
+  position: relative;
+}
+
+.line__quote p {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
+.line[data-length="short"] .line__quote {
+  font-size: var(--quote-short);
+  line-height: 1.15;
+  max-width: 28ch;
+}
+
+.line[data-length="medium"] .line__quote {
+  font-size: var(--quote-medium);
+  line-height: 1.22;
+  max-width: 34ch;
+}
+
+.line[data-length="long"] .line__quote {
+  font-size: var(--quote-long);
+  line-height: 1.32;
+  max-width: 40ch;
+}
+
+.line__author {
+  margin-top: clamp(1.25rem, 0.9rem + 1.5vw, 2rem);
+  font-size: var(--text-author);
+  font-weight: 500;
+}
+
+.line__author::before {
+  content: "— ";
+}
+
+.line__loading {
+  margin-top: 0.5rem;
+  font-size: var(--text-ui);
+}
+
+.line--enter .line__quote,
+.line--enter .line__author {
+  animation: line-in 140ms ease-out;
+}
+
+@keyframes line-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line--enter .line__quote,
+  .line--enter .line__author {
+    animation: none;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.75rem;
+}
+
+.action {
+  min-height: 44px;
+  padding: 0.4rem 0;
+  font-size: var(--text-ui);
+  font-weight: 600;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.action:hover:not(:disabled) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.action:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.action--copy {
+  min-width: 9ch;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    gap: 0;
+  }
+}

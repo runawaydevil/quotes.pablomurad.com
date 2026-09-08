@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Good Line</title>
+    <meta name="description" content="One quote. Another if you want it." />
+    <link rel="canonical" href="https://quotes.pablomurad.com/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    />
+    <meta name="theme-color" content="#E35D1A" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="A Good Line" />
+    <meta property="og:title" content="A Good Line" />
+    <meta property="og:description" content="One quote. Another if you want it." />
+    <meta property="og:url" content="https://quotes.pablomurad.com/" />
+    <meta property="og:image" content="https://quotes.pablomurad.com/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A Good Line" />
+    <meta name="twitter:description" content="One quote. Another if you want it." />
+    <meta name="twitter:image" content="https://quotes.pablomurad.com/og.svg" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="A Good Line — home">A Good Line</a>
+    </header>
+
+    <main class="stage">
+      <figure class="line" id="line" data-length="medium">
+        <blockquote class="line__quote" aria-live="polite" aria-atomic="true">
+          <p id="quote-text"></p>
+        </blockquote>
+        <figcaption class="line__author" id="quote-author"></figcaption>
+        <p class="line__loading" id="line-loading" hidden>One moment.</p>
+      </figure>
+
+      <div class="actions">
+        <button class="action" id="btn-another" type="button" disabled>Another quote</button>
+        <button class="action action--copy" id="btn-copy" type="button" disabled>Copy</button>
+      </div>
+
+      <p class="visually-hidden" id="status" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer class="site-footer">
+      <p>Developed by <a href="https://pablomurad.com" rel="noopener noreferrer">Pablo Murad</a></p>
+      <a
+        class="site-footer__github"
+        href="https://github.com/runawaydevil/quotes.pablomurad.com"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        <span class="site-footer__github-icon" aria-hidden="true"></span>
+      </a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

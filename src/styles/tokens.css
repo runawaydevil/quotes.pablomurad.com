@@ -1,0 +1,16 @@
+:root {
+  --field: #e35d1a;
+  --ink: #ffffff;
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --quote-short: clamp(2rem, 1.35rem + 3.4vw, 3.75rem);
+  --quote-medium: clamp(1.65rem, 1.2rem + 2.2vw, 2.65rem);
+  --quote-long: clamp(1.35rem, 1.1rem + 1.4vw, 2rem);
+
+  --text-author: clamp(1.05rem, 0.95rem + 0.4vw, 1.2rem);
+  --text-ui: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+
+  --gutter: clamp(1.25rem, 0.7rem + 3vw, 3.25rem);
+  --column: 40rem;
+}

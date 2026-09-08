@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+coverage
+public/data/
+.vite
+*.tsbuildinfo
+.eslintcache
+
+.env
+.env.*
+!.env.example
+*.local
+
+*.log
+.DS_Store
+Thumbs.db
